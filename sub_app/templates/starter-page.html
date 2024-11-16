@@ -1,0 +1,53 @@
+{% extends "layout.html" %}{%load static%} {% block body%}
+<main class="main">
+  <!-- Page Title -->
+  <div
+    class="page-title"
+    data-aos="fade"
+
+  >
+    <div class="container position-relative">
+      <h1>Starter Page</h1>
+      <p>
+        These pains of delight are to be avoided, for they are themselves
+        harmful, and because they involve assuming certain inconveniences
+        without any proper reason
+      </p>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'mwanzo'%}" class="homelink">Home</a></li>
+          <li class="current">Starter Page</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
+  <!-- Starter Section Section -->
+  <section id="starter-section" class="starter-section "style="background-image: url({% static 'assets/img/hotels-2.jpg'%}); color:white; text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan; ">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Welcome To TheEvent</h2>
+      <p data-aos="fade-up" data-aos-delay="200" class="fs-2">
+        Check for the coming events <br />Click here <br />
+      </p>
+      <button  type="button" href="{% url 'mwanzo'%}"  class="btn btn-primary"><a href="{% url 'mwanzo'%}">Home</a></li></button>
+      <p data-aos="fade-up" data-aos-delay="200" class="fs-2">
+        Go Live Event <br />Click here <br />
+      </p>
+      <button
+        type="button"
+        class="btn btn-lg btn-danger"
+        data-bs-toggle="popover"
+        data-bs-title="Popover title"
+        data-bs-content="And here's some amazing content. It's very engaging. Right?"
+      >
+         <a href="{% url 'ongea'%}">Go Live</a></li>
+      </button>
+
+    </div>
+    <!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up"></div>
+  </section>
+</main>
+{%endblock%}

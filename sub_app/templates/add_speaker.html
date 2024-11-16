@@ -1,0 +1,45 @@
+{% extends "layout.html" %}{%load static%} {% block body%}
+<main class="main">
+  <section id="hero" class="hero section dark-background">
+    <img
+      src="{% static 'assets/img/hero-bg.jpg'%}"
+      alt=""
+      data-aos="fade-in"
+      class=""
+    />
+
+    <div class="container d-flex flex-column align-items-center text-center">
+      <h2>Add Speaker</h2>
+      <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input
+          name="spker_name"
+          type="text"
+          placeholder="Speaker Name"
+          class="form-control"
+          required
+        />
+        <br />
+        <input
+          name="speaker_qt"
+          type="text"
+          placeholder="Spker Quote"
+          class="form-control"
+          required
+        /><br />
+        <textarea
+          name="spker_desc"
+          placeholder="Speaker Description"
+          class="form-control"
+          required
+        >
+        </textarea>
+        <br />
+        <input name="spker_img" type="file" required /><br />
+        <input type="submit" value="Save" class="btn btn-success" />
+      </form>
+    </div>
+  </section>
+</main>
+
+{%endblock%}
