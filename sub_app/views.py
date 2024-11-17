@@ -8,7 +8,9 @@ from sub_app.models import Speaker
 def home(request):  
     return render(request, 'starter-page.html')
 def starter(request):   
-    return render(request, 'index.html')
+    speakers = Speaker.objects.all()
+    print(speakers)
+    return render(request,'index.html',{"speakers": speakers})
 def speaker(request):   
     return render(request, 'speaker-details.html')
 def addspeaker (request): 
@@ -28,7 +30,6 @@ def addspeaker (request):
         speaker.save()
         return redirect('/')
          
-    return render(request,'add_speaker.html')
-def viewspeaker(request):
-    speaker = Speaker.objects.all()
-    return render(request,'index.html',{"speaker": speaker})
+    return render(request,'add_speak er.html')
+
+    
